@@ -1,0 +1,337 @@
+﻿PLAYBOOK FOR PROTOTYPE:-
+
+
+1. PHISHING
+T1566 — Phishing
+T1204 — User Execution
+
+
+1        Introduction
+Phishing attacks are a common and persistent threat to organizations, as they are designed to deceive and exploit individuals into divulging sensitive information or performing malicious actions. Phishing attacks are often delivered through email, but can also be delivered through other channels, such as social media, SMS, and phone calls. Phishing campaigns can be particularly dangerous, as they are coordinated and persistent attempts to exploit individuals over a period of time. The purpose of this playbook is to provide guidance and procedures for managing phishing attacks and campaigns in a timely and effective manner.
+1.1       Purpose of the playbook
+The purpose of this playbook is to help SOC and CSIRT teams detect, analyze, and respond to phishing attacks and campaigns in a way that minimizes the impact on the organization's operations, reputation, and assets. The playbook provides a framework for managing phishing incidents, including incident detection, incident response, communication and coordination, post-incident activities, and continuous improvement.
+1.2       Scope of the playbook
+This playbook covers the management of phishing attacks and campaigns that target the organization's employees, customers, partners, and other stakeholders through various channels. The playbook does not cover other types of cyber threats, such as malware, ransomware, or DDoS attacks, although some of the procedures and tools may be relevant.
+1.3       Audience and stakeholders
+The playbook is intended for use by SOC and CSIRT teams, as well as other IT and security staff who may be involved in phishing incident management. The stakeholders who may be affected by phishing attacks and their management include the executive management, legal and compliance teams, HR and training departments, customer support, and external partners and customers. The playbook aims to facilitate communication and collaboration among these stakeholders during a phishing incident.
+2        Phishing Overview
+2.1       Definition of phishing
+Phishing is a type of cyber-attack that involves the use of social engineering techniques to deceive and exploit individuals into divulging sensitive information, such as usernames, passwords, credit card numbers, or personal data, or into performing malicious actions, such as downloading malware or transferring funds to a fraudulent account. Phishing attacks typically involve the impersonation of a trustworthy entity, such as a bank, a government agency, a social media platform, or a popular website, and rely on the victim's curiosity, urgency, fear, or greed to persuade them to take the desired action.
+2.2       Types of phishing attacks and their impact
+Phishing attacks can take various forms, depending on the goals and targets of the attacker. Some common types of phishing attacks include:
+2.2.1       Email phishing
+This is the most common type of phishing attack, which involves the use of fraudulent emails that mimic legitimate ones to trick the victim into clicking on a link, downloading an attachment, or entering their credentials. Email phishing attacks can have various impacts, such as stealing sensitive data, installing malware, compromising accounts, or conducting further attacks.
+2.2.2       Spear phishing
+This is a more targeted form of phishing attack, which involves the use of personalized emails that are tailored to the victim's interests, role, or context to increase the likelihood of success. Spear phishing attacks can be more difficult to detect and can have more severe impacts, such as compromising high-value assets, stealing intellectual property, or conducting espionage.
+2.2.3       Whaling
+This is a type of spear phishing attack that targets senior executives or other high-profile individuals in the organization, with the goal of gaining access to confidential information or performing fraudulent activities. Whaling attacks can have significant financial, legal, and reputational impacts on the organization.
+2.2.4       Vishing
+This is a type of phishing attack that uses phone calls or voice messages to deceive and exploit the victim, such as by posing as a bank representative and asking for the victim's credentials or PIN.
+2.2.5       Smishing
+This is a type of phishing attack that uses SMS messages or messaging apps to deceive and exploit the victim, such as by sending a link to a fake website that asks for the victim's credentials or personal data.
+2.3       Common delivery methods
+Phishing attacks can be delivered through various channels, depending on the type and target of the attack. Some common delivery methods include:
+2.3.1       Email
+Phishing emails can be sent from a fake or compromised email address, and can contain various elements to increase their credibility and urgency, such as logos, images, links, and urgency messages.
+2.3.2       Social media
+Phishing attacks can be delivered through social media platforms, such as Facebook, LinkedIn, or Twitter, using fake profiles, messages, or links.
+2.3.3       Instant messaging
+Phishing attacks can be delivered through instant messaging apps, such as WhatsApp, Skype, or Slack, using fake profiles, messages, or links.
+2.3.4       SMS
+Phishing attacks can be delivered through SMS messages, using fake phone numbers or links to fake websites.
+2.4       Signs of a phishing attack
+There are several signs that can indicate a phishing attack, such as:
+2.4.1       Suspicious sender or domain
+The sender's email address or domain may look unfamiliar, misspelled, or similar to a legitimate one, but with a slight variation.
+2.4.2       Urgency or fear messages
+The email may contain messages that create a sense of urgency or fear, such as warning of account suspension, data loss, or legal action.
+2.4.3       Suspicious links or attachments
+The email may contain links or attachments that are unexpected, suspicious, or have a different name or extension than expected.
+2.4.4       Phishing website
+The link in the email may direct the victim to a fake website that looks like a legitimate one, but has a different URL or design, and may ask for sensitive information or credentials.
+2.4.5       Poor grammar or spelling
+The email may contain spelling or grammar mistakes, which can indicate that it was not written by a professional or legitimate organization.
+2.4.6       Unusual sender behavior
+The sender may ask for unusual or irrelevant information, or request that the victim take a specific action, such as clicking a link, downloading a file, or sending money.
+2.4.7       Unusual requests
+The email may contain unusual requests, such as asking the victim to send money to a foreign country, provide access to sensitive data, or disclose confidential information.
+2.4.8       Impersonation of a trusted entity
+The email may appear to come from a trusted entity, such as a bank, a government agency, or a social media platform, but with a slight variation or an unexpected request.
+2.4.9       Unusual email content
+The email may contain unusual or irrelevant content, such as unrelated images, videos, or offers, or may be sent at an unusual time or frequency.
+It's important that the CISO team or the security awareness and training team educates the organization's employees and stakeholders about the signs of phishing attacks and provides guidance on how to report and handle them. This can help to prevent or mitigate the impact of phishing attacks and improve the overall security posture of the organization.
+3        Incident Detection and Analysis
+3.1       Monitoring and detection tools
+3.1.1       Anti-phishing software
+This is a type of security software that is designed to detect and prevent phishing attacks by analyzing email and web traffic for known phishing indicators, such as malicious URLs, attachments, or scripts.
+3.1.2       DNS filters
+These are network security services that can block or redirect users from accessing malicious or suspicious domains or IP addresses associated with phishing attacks.
+3.1.3       Email filters
+These are security filters that can scan incoming and outgoing email messages for known or suspected phishing indicators, such as suspicious senders, domains, or links, and block or quarantine them.
+3.1.4       URL scanners
+These are online tools or browser extensions that can check the safety and reputation of URLs before users click on them, using various databases and algorithms to detect known or suspected phishing domains or websites.
+3.1.5       Web filters
+These are network security services that can block or allow users from accessing certain types of websites or content based on predefined rules or policies, such as social media, gaming, or shopping sites.
+3.1.6       Threat intelligence feeds
+These are external sources of information about known or emerging phishing attacks, such as vendor reports, government advisories, or open-source intelligence, that can be used to update detection rules and improve response times.
+3.1.7       Security Information and Event Management (SIEM) systems
+These are software platforms that can aggregate, correlate, and analyze security events from various sources, such as network logs, endpoint data, and application logs, and generate alerts for suspicious or anomalous activities related to phishing attacks.
+3.1.8       User awareness training
+This is a type of security training that aims to educate users and stakeholders about the risks and threats of phishing attacks, and to provide guidance on how to detect, report, and prevent them. User awareness training can be delivered through various methods, such as classroom training, online courses, or simulated phishing campaigns.
+3.2       Identifying indicators of compromise (IOCs)
+SOC and CSIRT teams can use various techniques to identify IOCs for phishing attacks, such as:
+3.2.1       Email header analysis
+This involves analyzing the metadata of email messages, such as the source and destination addresses, timestamps, or routing information, to identify signs of phishing attacks, such as spoofed or forged email addresses.
+3.2.2       Email content analysis
+This involves analyzing the body and attachments of email messages, such as the language, tone, format, or content, to identify signs of phishing attacks, such as requests for sensitive information, urgent or emotional appeals, or grammatical errors.
+3.2.3       Attachment analysis
+This involves analyzing the content and behavior of email attachments, such as documents, executables, or images, to identify signs of phishing attacks, such as malicious macros, embedded code, or hidden files.
+3.2.4       Link analysis
+This involves analyzing the URLs or hyperlinks in email messages or web pages, to identify signs of phishing attacks, such as suspicious domains, redirects, or obfuscation techniques.
+3.2.5       DNS analysis
+This involves analyzing the DNS queries and responses generated by phishing attacks, to identify signs of phishing attacks, such as domain name resolutions to known or suspected malicious domains or IP addresses.
+3.2.6       Web traffic analysis
+This involves analyzing the network traffic generated by phishing attacks, to identify signs of phishing attacks, such as HTTP requests or responses to known or suspected phishing domains or URLs.
+3.3       Incident prioritization
+Incident prioritization is the process of evaluating and ranking security incidents based on their potential impact on the organization, the severity of the threat, and the resources required for response. Prioritization helps security teams focus their efforts on the most critical incidents and allocate resources efficiently. Prioritization factors may include the number of affected users, the type and sensitivity of data compromised, potential for reputational damage, and the organization's risk tolerance.
+3.4       Incident classification
+Phishing incident classification involves categorizing security incidents related to phishing attacks based on their characteristics, such as the type of phishing attack, targeted users, or attacker's objectives. The aim of classification is to help security teams understand the nature of the phishing threat and determine the most appropriate response strategy. Common phishing incident classifications may include email phishing attacks, spear phishing attacks, and whaling attacks. Classification also helps in tracking phishing incident trends and identifying areas where phishing security controls may need improvement.
+4        Incident Response
+4.1       Incident response team roles and responsibilities
+The composition of a Computer Security Incident Response Team (CSIRT) can vary depending on the size and needs of the organization. The following roles and responsibilities are typically included in a CSIRT:
+4.1.1       Security Incident Handler / Manager
+Oversees the overall incident response process, coordinates team activities, manages resources, and makes decisions on prioritizing incidents based on severity and potential impact.
+4.1.2       Security Analysts
+Responsible for investigating and analyzing incidents, identifying the root cause, and recommending appropriate mitigation and recovery actions. They may specialize in areas such as network security, endpoint security, or malware analysis.
+4.1.3       IT Specialists or Subject Matter Experts (SMEs)
+Provide technical expertise in specific areas to support the implementation of containment and eradication measures and restore affected systems. They may be experts in network security, system administration, cloud services, or other relevant fields.
+4.1.4       External Partners or Third Parties
+Depending on the nature and scope of the incident, the CSIRT may need to engage external partners or service providers, such as cybersecurity vendors, forensic specialists, or law enforcement agencies, to support the response effort and provide specialized expertise.
+4.1.5       Chief Executive Officer (CEO)
+Provides executive oversight and support for the incident response process, ensuring that the organization's priorities are taken into account and that necessary resources are allocated to the response effort.
+4.1.6       Chief Financial Officer (CFO)
+Manages financial aspects of the incident response process, such as allocating budgets and resources, and assessing the financial impact of incidents on the organization.
+4.1.7       Chief Information Security Officer (CISO)
+Provides strategic oversight of the incident response process, ensures alignment with organizational goals and policies, and supports the Incident Manager in decision-making and resource allocation.
+4.1.8       Legal and Compliance Officers
+Ensure that the response process complies with applicable laws, regulations, and contractual obligations, and provide guidance on potential legal risks and liabilities arising from the incident.
+4.1.9       Public Relations and Communications
+Manage internal and external communications, coordinate notifications to affected parties, and handle media inquiries to protect the organization's reputation and maintain stakeholder trust.
+4.1.10   Human Resources (HR)
+Support the CSIRT by managing personnel-related aspects of the incident response process, such as coordinating employee notifications, providing guidance on disciplinary actions or personnel changes, and assisting with any internal investigations.
+The composition of a CSIRT can be tailored to the specific needs and resources of an organization. The key is to ensure that the team includes individuals with the necessary skills, expertise, and authority to effectively manage and respond to security incidents.
+4.2       Initial response steps
+If a user suspects a phishing attack, they should immediately report it to the SOC.
+Users shall also avoid clicking on any links or downloading any attachments in the suspicious email.
+4.2.1       Detection and Analysis
+1.      Review any reported phishing email and monitor email filters, web filters, DNS filters, and threat intelligence feeds to identify potential phishing attacks/campaigns.
+2.      Triage phishing incidents based on severity, impact, and risk.
+3.      Perform initial analysis to confirm the phishing and determine its scope.
+4.      Identify affected users and the extent of the attack.
+5.      Conduct a threat intelligence search to identify any known threats or campaigns.
+6.      Document incident details, including date, time, affected users, and type of attack.
+7.      Notify the Computer Security Incident Response Team (CSIRT) and relevant stakeholders.
+4.2.2       Containment
+1.      Reset the targeted user's credentials.
+2.      Assess the extent of the incident and determine the most appropriate containment strategy.
+3.      Implement the containment strategy with minimal disruption to business operations.
+4.2.3       Quarantine
+1.      Block the sender's email address and any malicious URLs or domains associated with the phishing attack, to prevent malicious email from reaching other users.
+4.2.4       Communication and Escalation
+1.      Inform other users and relevant stakeholders about the phishing attack and any necessary precautions they should take.
+2.      Issue an abuse report to the email service provider or web hosting company that was used to send the phishing email.
+3.      Escalate the incident to the appropriate level of management, if necessary.
+4.      Report the incident to relevant authorities, such as law enforcement or regulatory bodies, if needed.
+4.2.5       Investigation and Root Cause Analysis
+1.      Collect and analyze phishing email to determine source, type, and characteristics, including email headers, content, attachments, URLs, and web traffic.
+2.      Identify the attacker's IP address and trace their location.
+3.      Determine if any credentials or data was compromised/leaked/stolen and take necessary actions as needed.
+4.      Document the incident response process, actions taken, decisions made, and lessons learned.
+4.2.6       Eradication and Recovery
+1.      Remove phishing emails and associated attachments from affected user accounts / email systems (mailboxes).
+2.      Monitor user accounts for any suspicious activity.
+3.      Adjust email filters and spam blockers.
+4.      Update security controls as needed.
+4.2.7       Post-Incident Activities
+1.      Conduct a post-incident review to evaluate response effectiveness and identify areas for improvement.
+2.      Create a comprehensive incident report summarizing the details and recommendations.
+3.      Provide ongoing security awareness training and conduct periodic security assessments.
+4.      Update the incident response plan, if needed.
+By following a structured and well-defined incident response process, organizations can effectively manage and mitigate the impact of security incidents, including phishing attacks. This requires a coordinated effort from a diverse team of experts, each with their unique roles and responsibilities, as well as a commitment to ongoing communication, collaboration, and continuous improvement.
+5        Communication and Coordination
+5.1       Internal communication
+5.1.1       Reporting to management
+Keep senior management informed about the incident's status, potential impact, and any required resources or decisions. This may involve regular updates or briefings, as well as sharing a comprehensive incident report upon the conclusion of the response process.
+5.1.2       Informing affected departments and users
+Communicate with affected departments and users to provide information about the incident, its potential impact on their operations, and any required actions on their part. This may include sharing details about the nature of the threat, recommended remediation steps, and relevant security best practices.
+5.2       External communication
+5.2.1       Notifying customers and partners
+Inform customers and partners who may be affected by the incident, providing them with relevant details and guidance on how to protect themselves. This should be done in a transparent and timely manner to maintain trust and demonstrate the organization's commitment to security.
+5.2.2       Legal and regulatory reporting requirements
+In some cases, organizations may be required to report security incidents to regulatory bodies or other authorities, depending on the nature and severity of the incident, as well as the specific laws and regulations applicable to the organization. Legal and compliance officers should be involved in determining the appropriate reporting requirements and ensuring that the organization meets its obligations in a timely manner.
+Effective communication and coordination are critical to a successful incident response process, as they ensure that all stakeholders are informed and aligned, and that the organization's reputation and legal standing are protected. By establishing clear and secure communication channels and protocols, organizations can ensure a smooth and coordinated response to security incidents.
+6        Conducting a post-incident review
+6.1       Lessons learned
+Analyze the incident response process to identify successes, failures, and areas for improvement. Discuss the incident with all involved team members to gather their insights and perspectives on what worked well and what could be done differently in the future.
+6.2       Process improvements
+Based on the lessons learned, develop recommendations for improving the incident response process. This may include refining communication protocols, enhancing detection and response capabilities, or updating incident response plans and policies.
+6.3       Updating the playbook
+Revise the Security Operations Center (SOC) playbook to incorporate the lessons learned and process improvements identified during the post-incident review. This ensures that the playbook remains current and effective in guiding future incident response efforts.
+6.4       Updating incident response plans and policies
+Review and update the organization's incident response plans and policies to reflect the lessons learned and process improvements identified during the post-incident review. This may involve adjusting procedures, updating contact lists, or modifying escalation criteria.
+6.5       Enhancing security controls and countermeasures
+Based on the post-incident review findings, enhance the organization's security posture by implementing additional security measures to prevent similar incidents in the future. These may involve deploying or adjusting Anti-Phishing Software, DNS, email, and web filters, as well as implementing Two-Factor Authentication or introducing new security tools.
+6.6       Security awareness and training programs
+Use the insights gained from the incident and post-incident review to inform and enhance security awareness and training programs. This may involve updating training materials, conducting targeted awareness campaigns, or providing additional training sessions focused on specific areas of concern.
+By systematically addressing the lessons learned and implementing improvements following a security incident, organizations can continuously enhance their incident response capabilities and overall security posture. This proactive approach helps to mitigate risks and better prepare the organization for future incidents.
+7        Continuous Improvement
+7.1       Regularly updating the playbook
+Review and update the SOC playbook on a regular basis to ensure it remains current and effective in guiding future incident response efforts. This may involve incorporating lessons learned from past incidents, adding new tools or techniques, or updating procedures based on evolving threat landscapes.
+7.2       Staying informed about new phishing attacks/campaigns
+Staying informed about new phishing attacks and campaigns is critical for effective incident response. Organizations can stay up to date by monitoring threat intelligence feeds, attending security conferences, and reviewing industry publications. By understanding the latest tactics and techniques used by attackers, organizations can better prepare and defend against phishing attacks.
+7.3       Conducting periodic simulations and exercises
+Periodic simulations and exercises are an effective way to test incident response procedures and identify areas for improvement. These exercises can be tabletop exercises or full-scale simulations, depending on the organization's needs and resources. By conducting these exercises, organizations can test their response plans, identify any weaknesses, and adjust their procedures and policies accordingly.
+7.4       Leveraging threat intelligence and industry best practices
+Leveraging threat intelligence and industry best practices is essential for effective incident response. Threat intelligence feeds can provide organizations with up-to-date information on the latest phishing attacks and campaigns, while industry best practices can provide guidance on effective response tactics and strategies. By incorporating this information into incident response plans and procedures, organizations can better defend against phishing attacks and minimize their impact.
+Continuous improvement is essential for effective incident response to phishing attacks. Regularly updating the playbook, staying informed about new phishing attacks and campaigns, conducting periodic simulations and exercises, and leveraging threat intelligence and industry best practices are key components of a proactive and effective incident response strategy. By staying up to date on the latest tactics and techniques used by attackers and regularly testing incident response procedures, organizations can better defend against phishing attacks and continuously improve their overall security posture.
+8        Conclusion
+8.1       Importance of a well-defined SOC playbook
+A well-defined SOC playbook is essential for effective incident response to phishing attacks. It provides clear guidance on the steps to take in the event of a security incident, and ensures that all team members are aligned and coordinated in their response efforts. A SOC playbook should be reviewed and updated regularly to reflect lessons learned from past incidents and incorporate new best practices and tools.
+8.2       Commitment to a proactive security posture
+A proactive security posture involves implementing a range of measures to prevent phishing attacks from succeeding in the first place. This may include deploying anti-phishing software, conducting regular security awareness training for employees, implementing multi-factor authentication, etc.
+8.3       Promoting a culture of continuous improvement
+Encouraging a culture of continuous improvement is essential for maintaining a strong security posture in the face of an ever-changing threat environment. This involves regularly reviewing and updating security policies, procedures, and controls to ensure they remain effective against current threats.
+Continuous improvement also includes fostering open communication and collaboration among team members, learning from past incidents, conducting regular training and exercises, and staying informed about the latest threats and best practices in the industry.
+In conclusion, a well-defined SOC playbook is critical for effective incident response to phishing attacks. Along with this, a proactive security posture that includes measures to prevent phishing attacks from succeeding in the first place is necessary. Additionally, promoting a culture of continuous improvement is essential for maintaining a strong security posture in the face of an ever-changing threat environment. This involves regularly reviewing and updating security policies, procedures, and controls, fostering open communication and collaboration among team members, conducting regular training and exercises, and staying informed about the latest threats and best practices in the industry. By following these practices, organizations can better protect themselves against phishing attacks and minimize their impact.
+9        Appendix
+9.1       Standard Operating Procedure (SOP) for Phishing Incident Response Template 1
+Phishing Incident Response Standard Operating Procedure for the Security Operations Center (SOC) / CSIRT
+Definition:
+This SOP provides a systematic approach to responding to phishing incidents, outlining the steps necessary to detect, analyze, contain, quarantine, communicate, escalate, investigate, eradicate, and recover from such incidents, as well as post-incident activities.
+Objectives:
+* To establish a consistent and effective approach to respond to phishing incidents.
+* To minimize the impact of phishing attacks on business operations, reputation and information security.
+* To prevent unauthorized access, data theft, and other potential consequences of successful phishing attacks.
+* To continuously improve the organization's phishing incident response capabilities
+Scope:
+This SOP is applicable to all personnel involved in the security incident response process, including security analysts, IT specialists, security incident handlers/managers, public relations and communication teams, and external partners or third parties.
+Procedure:
+Initial Response Steps:
+Detection and Analysis
+* Review any reported phishing email and monitor email filters, web filters, DNS filters, and threat intelligence feeds to identify potential phishing attacks/campaigns. (Security Analysts)
+* Triage phishing incidents based on severity, impact, and risk. (Security Analysts)
+* Perform initial analysis to confirm the phishing and determine its scope. (Security Analysts)
+* Identify affected users and the extent of the attack. (Security Analysts)
+* Conduct a threat intelligence search to identify any known threats or campaigns. (Security Analysts)
+* Document incident details, including date, time, affected users, and type of attack. (Security Analysts)
+* Notify the Computer Security Incident Response Team (CSIRT) and relevant stakeholders. (Security Incident Handler / Manager)
+Containment:
+* Reset the targeted user's credentials. (IT Specialist/SME)
+* Assess the extent of the incident and determine the most appropriate containment strategy. (Security Incident Handler / Manager)
+* Implement the containment strategy with minimal disruption to business operations. (IT Specialist/SME)
+Communication and Escalation:
+* Inform other users and relevant stakeholders about the phishing attack and any necessary precautions they should take. (Public Relations and Communications)
+* Issue an abuse report to the email service provider or web hosting company that was used to send the phishing email. (Security Analysts)
+* Escalate the incident to the appropriate level of management, if necessary. (Security Incident Handler / Manager)
+* Report the incident to relevant authorities, such as law enforcement or regulatory bodies, if needed. (Chief Information Security Officer (CISO) / Legal and Compliance Officer)
+Investigation and Root Cause Analysis:
+* Collect and analyze phishing email to determine source, type, and characteristics, including email headers, content, attachments, URLs, and web traffic. (Security Analyst)
+* Identify the attacker's IP address and trace their location. (Security Analyst)
+* Determine if any credentials or data was compromised/leaked/stolen and take necessary actions as needed. (Security Analyst)
+* Document the incident response process, actions taken, decisions made, and lessons learned. (Security Analyst)
+Eradication and Recovery:
+* Remove phishing emails and associated attachments from affected user accounts / email systems (mailboxes). (Security Analyst)
+* Monitor user accounts for any suspicious activity. (Security Analyst)
+* Adjust email filters and spam blockers. (IT Specialist/SME)
+* Update security controls as needed. (Chief Information Security Officer (CISO))
+Post-Incident Activities:
+* Conduct a post-incident review to evaluate response effectiveness and identify areas for improvement. (Security Incident Handler / Manager, Chief Information Security Officer, and other relevant CSIRT team members)
+* Create a comprehensive incident report summarizing the details and recommendations. (Security Incident Handler / Manager)
+* Provide ongoing security awareness training and conduct periodic security assessments. (Chief Information Security Officer (CISO) respectively CISO org.)
+* Update the incident response plan, if needed. (Security Incident Handler / Manager, Chief Information Security Officer (CISO))
+Each step shall only be performed in a controlled and coordinated manner, and all actions taken shall also be thoroughly documented in accordance with our internal guidelines and the NIST Special Publication 800-61 (" Latest Revision") to support future incident responses.
+Lessons Learned and Continuous Improvement:
+* Review the incident response process and identify areas for improvement. (Security Analyst, Security Incident Handler / Manager)
+* Incorporate lessons learned into the incident response plan and update the SOP accordingly. (Security Incident Handler / Manager, Chief Information Security Officer (CISO))
+* Conduct tabletop exercises and simulations to test the incident response plan and SOP. (Chief Information Security Officer (CISO))
+* Provide feedback and recommendations to relevant stakeholders to improve overall security posture. (Security Incident Handler / Manager)
+Following this SOP enables the SOC/CSIRT team to effectively manage malware incidents and prevent future incidents by continuously training and improving security measures. In addition, the continuous training of employees through security awareness campaigns by the CISO organization also plays an important role in strengthening the security awareness of employees.
+9.2       Standard Operating Procedure (SOP) for Phishing Incident Response Template 2
+Phishing Incident Response Standard Operating Procedure for the Security Operations Center (SOC) / CSIRT
+Definition
+A phishing attack is a form of social engineering in which attackers attempt to obtain sensitive information by disguising themselves as trustworthy entities through electronic communication, typically email. This SOP outlines the process for a Security Operations Center (SOC) or Computer Security Incident Response Team (CSIRT) to respond to and analyze reported phishing incidents.
+Objectives
+The objectives of this SOP are to:
+* Quickly and efficiently identify phishing attacks
+* Minimize the impact of phishing attacks on the organization and its users
+* Collect, analyze, and share relevant threat intelligence
+* Improve the organization's security posture and incident response capabilities
+Scope
+This SOP applies to all SOC or CSIRT members who are responsible for responding to and analyzing phishing incidents reported by users within the organization. The procedures outlined in this SOP encompass the entire phishing incident response process, from initial triage to post-incident review.
+Procedure
+Initial Response Steps:
+Initial Triage:
+1) Review the user's report and gather all relevant information.
+* Tools: Incident Response & Management (IRM) or ticketing system
+* Who: Security Analysts
+2) Assess the potential impact and severity of the attack.
+* Who: Security Incident Handler / Manager
+Email Analysis:
+1) Analyze email headers using appropriate tools.
+* Tools: Google Admin Toolbox, MXToolbox, IPVoid Email Header Analyzer, or use the built-in header analysis features in email clients, etc.
+* Who: Security Analysts
+2) Use threat intelligence platforms to check sender reputation and associated information.
+* Tools: AlienVault OTX, Anomali, Mandiant Threat Intelligence, MISP, Shadowserver, VirusTotal, etc.
+* Who: Security Analysts
+Link and Attachment Analysis:
+1) Analyze destination webpages using link analysis tools.
+* Tools: CheckPhish.ai, Google Safe Browsing, Sucuri SiteCheck, URLscan.io, URLVoid, VirusTotal, etc.
+* Who: Security Analysts
+2) Perform dynamic analysis of attachments in an isolated environment.
+* Tools: Any.Run, Cuckoo Sandbox, Hybrid Analysis, Joe Sandbox, VxStream Sandbox, etc.
+* Who: Security Analysts
+3) Check attachments and links against known phishing signatures.
+* Tools: Antivirus or anti-malware software, Google Safe Browsing, MetaDefender Cloud, PhishTank, VirusTotal, Zscaler URL Checker, etc.
+* Who: Security Analysts
+Indicators of Compromise (IoCs) Collection:
+1) Extract and enrich IoCs from the phishing email.
+* Information to collect: Attachments, Domain names, Embedded images and files, Malware hashes (MD5, SHA-1 and SHA-256), Sender's email address, Sender's IP address, URLs, etc.
+* Who: Security Analysts
+2) Update the organization's threat intelligence database with new IoCs.
+* Tools: Threat intelligence platforms, Anomali, MISP, etc.
+* Who: Security Analysts
+Incident Response:
+1) Initiate the organization's incident response plan if the attack is confirmed.
+* Follow the established incident response plan or playbook.
+* Who: Security Incident Handler / Manager
+2) Contain the threat by blocking relevant elements using.
+* Content filtering (Email gateway), DNS filtering (Domain blocking), Intrusion Prevention System (IPS), Proxy or Web filtering, Spam filter, and etc.
+* Who: IT Specialists or SMEs
+3) Notify affected users and provide guidance on response actions.
+* Use email templates and other internal communication channels to inform users.
+* Who: CISO, Public Relations and Communications
+4) Reset credentials and monitor for suspicious activity.
+* Use identity and access management tools to reset passwords and monitor user activity.
+* Who: IT Specialists or SMEs
+5. Document the incident in the organization's security incident management system.
+* Use a standadized template for this
+* Who: Security Analysts
+Lessons Learned and Reporting:
+1) Conduct a post-incident review
+* Identify gaps in security controls and processes.
+* Who: Security Incident Handler / Manager, CISO, IT Specialists or SMEs, etc.
+2) Analyze the attack's TTPs
+* Analyze the attack's TTPs and update the organization's threat intelligence database.
+* Who: Security Analysts
+3) Create a detailed Cyber Security Incident Report
+* Create a detailed cyber security incident report and share it with relevant stakeholders.
+* Who: Security Analysts, Security Incident Handler / Manager
+4. Improve the organization's security posture, policies, and training programs
+* Use lessons learned to improve the organization's security posture, policies, and training programs.
+* Who: CISO
+Continuous Improvement:
+1) Stay informed about the latest phishing trends and threat intelligence.
+* Who: Security Analysts, Security Incident Handler / Manager, CISO
+2) Periodically review and update the phishing response procedures.
+* Who: Security Analysts, Security Incident Handler / Manager, IT Specialists or SMEs, CISO
+3) Conduct regular phishing simulation exercises to evaluate user awareness and defense strategy.

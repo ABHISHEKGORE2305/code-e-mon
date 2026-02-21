@@ -3,3 +3,9 @@ numpy
 langchain-core
 networkx
 matplotlib
+faker
+sentence-transformers
+ollama
+seaborn
+chromadb
+langchain_ollama 
